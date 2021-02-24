@@ -22,10 +22,11 @@
 # 2015, 2017 Ryan Pavlik <ryan@sensics.com> <abiryan@ryand.net>
 # http://ryanpavlik.com
 #
-# Copyright Sensics, Inc. 2015, 2017.
+# Copyright 2015, 2017, Sensics, Inc.
 # Distributed under the Boost Software License, Version 1.0.
 # (See accompanying file LICENSE_1_0.txt or copy at
 # http://www.boost.org/LICENSE_1_0.txt)
+# SPDX-License-Identifier: BSL-1.0
 
 if(MSVC AND NOT CMAKE_VERSION VERSION_LESS 3.2)
     include(CMakeParseArguments)
@@ -53,7 +54,7 @@ if(MSVC AND NOT CMAKE_VERSION VERSION_LESS 3.2)
         set(HAS_SYMBOLS_CONDITION)
         foreach(_config ${INSTALLSYMS_CONFIGURATIONS})
             list(APPEND HAS_SYMBOLS_CONDITION "$<CONFIG:${_config}>")
-        endif()
+        endforeach()
         # make list comma separated
         string(REPLACE ";" "," HAS_SYMBOLS_CONDITION "${HAS_SYMBOLS_CONDITION}")
         # Wrap in an "OR" generator expression

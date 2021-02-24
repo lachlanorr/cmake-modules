@@ -14,7 +14,8 @@
 #  FindPackageHandleStandardArgs (known included with CMake >=2.6.2)
 #
 # Original Author:
-# 2014 Kevin M. Godby <kevin@godby.org>
+# Copyright 2014 Kevin M. Godby <kevin@godby.org>
+# SPDX-License-Identifier: BSL-1.0
 #
 # Distributed under the Boost Software License, Version 1.0.
 # (See accompanying file LICENSE_1_0.txt or copy at
@@ -60,7 +61,7 @@ find_path(UDEV_INCLUDE_DIR
 	)
 
 include(FindPackageHandleStandardArgs)
-find_package_handle_standard_args(UDEV
+find_package_handle_standard_args(udev
 	DEFAULT_MSG
 	UDEV_LIBRARY
 	UDEV_INCLUDE_DIR
